@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+}
+
+#root {
+  max-width: 500px;
+  margin: auto;
+  border: 1px solid black;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
