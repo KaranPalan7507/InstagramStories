@@ -6,7 +6,9 @@
       "thumbnail": "https://randomuser.me/api/portraits/men/1.jpg",
       "stories": [
         { "url": "https://picsum.photos/id/1/200/300" },
-        { "url": "https://picsum.photos/id/2/400/600" }
+        { "url": "https://picsum.photos/id/2/400/600" },
+        { "url": "https://picsum.photos/id/20/400/600" }
+
       ]
     },
     {
@@ -52,6 +54,24 @@
       "stories": [
         { "url": "https://picsum.photos/id/11/900/700" },
         { "url": "https://picsum.photos/id/12/400/400" }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "John Doe7",
+      "thumbnail": "https://randomuser.me/api/portraits/men/1.jpg",
+      "stories": [
+        { "url": "https://picsum.photos/id/1/200/300" },
+        { "url": "https://picsum.photos/id/2/400/600" }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "John Doe8",
+      "thumbnail": "https://randomuser.me/api/portraits/men/1.jpg",
+      "stories": [
+        { "url": "https://picsum.photos/id/1/200/300" },
+        { "url": "https://picsum.photos/id/2/400/600" }
       ]
     }
   ]

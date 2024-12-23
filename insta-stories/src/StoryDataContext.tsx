@@ -10,6 +10,8 @@ const StoryDataContext = createContext({
   selectedUser: null as IUser | null,
   selected: null as number | null,
   nextStory: () => {},
+  prevStory: () => {},
+  closeViewer: () => {},
 });
 export function StoryDataProvider({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true);
@@ -42,6 +44,24 @@ export function StoryDataProvider({ children }: { children: React.ReactNode }) {
       return newSelected;
     });
   };
+  const prevStory = () => {
+    setSelected((prev) => {
+      let newSelected = (prev || 0) - 1;
+      if (newSelected < 0) {
+        const currUserIndex = users.findIndex(
+          (user) => user.id === selectedUser?.id
+        );
+        setSelectedUser(currUserIndex >= 0 ? users[currUserIndex - 1] : null);
+        newSelected = 0;
+      }
+
+      return newSelected;
+    });
+  };
+  const closeViewer = () => {
+    setSelectedUser(null);
+    setSelected(null);
+  };
 
   return (
     <StoryDataContext.Provider
@@ -53,6 +73,8 @@ export function StoryDataProvider({ children }: { children: React.ReactNode }) {
         selectedUser,
         selected,
         nextStory,
+        prevStory,
+        closeViewer,
       }}
     >
       {children}

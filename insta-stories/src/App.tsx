@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import UserList from "./components/UserList";
 import { useEffect } from "react";
 import Viewer from "./components/Viewer";
@@ -23,10 +23,10 @@ function App() {
         ) : (
           <div className="container">
             <UserList />
+            <Viewer />
           </div>
         )}
       </main>
-      <Viewer />
     </>
   );
 }
