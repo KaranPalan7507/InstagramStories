@@ -1,0 +1,25 @@
+.viewer-wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  color: white;
+  z-index: 1;
+  .viewer {
+    max-width: 500px;
+    margin: auto;
+  }
+  .user-info{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .user-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+}

@@ -1,11 +1,14 @@
 body {
   margin: 0;
+  padding: 16px;
 }
 
 #root {
   max-width: 500px;
   margin: auto;
   border: 1px solid black;
+  box-sizing: border-box;
+  min-height: 90vh;
 }
 *::-webkit-scrollbar {
   display: none;

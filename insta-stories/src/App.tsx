@@ -1,14 +1,13 @@
 import "./App.css";
 import UserList from "./components/UserList";
-import { useEffect, useState } from "react";
-import data from "./data.json";
-import { IUser } from "./types";
+import { useEffect } from "react";
+import Viewer from "./components/Viewer";
+import { useStoryData } from "./StoryDataContext";
 
 function App() {
-  const [users, setUsers] = useState<IUser[]>([]);
-
+  const { getData, loading } = useStoryData();
   useEffect(() => {
-    setUsers(data.users);
+    getData();
   }, []);
 
   return (
@@ -19,10 +18,15 @@ function App() {
         </a>
       </header>
       <main>
-        <div className="container">
-          <UserList users={users} />
-        </div>
+        {loading ? (
+          <div>loading</div>
+        ) : (
+          <div className="container">
+            <UserList />
+          </div>
+        )}
       </main>
+      <Viewer />
     </>
   );
 }
