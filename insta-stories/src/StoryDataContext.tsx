@@ -6,7 +6,9 @@ const StoryDataContext = createContext({
   getData: () => {},
   loading: true,
   users: [] as IUser[],
-  storyClick: (user: IUser) => {},
+  storyClick: (user: IUser) => {
+    console.log(user);
+  },
   selectedUser: null as IUser | null,
   selected: null as number | null,
   nextStory: () => {},

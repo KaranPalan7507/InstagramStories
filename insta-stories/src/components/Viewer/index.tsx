@@ -22,7 +22,7 @@ const Viewer: React.FC<ViewerProps> = ({}) => {
       <div className="viewer-wrapper">
         <div className="viewer">
           <div className="indicator-list">
-            {selectedUser?.stories?.map((story, index) => {
+            {selectedUser?.stories?.map((_, index) => {
               return (
                 <div
                   key={index}
