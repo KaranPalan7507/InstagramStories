@@ -19,7 +19,7 @@ function App() {
       </header>
       <main>
         {loading ? (
-          <div>loading</div>
+          <div className="loading-indicator">loading</div>
         ) : (
           <div className="container">
             <UserList />
